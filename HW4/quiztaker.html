@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<title>Quiz Taker</title>
+
+		<link rel="stylesheet" type="text/css" href="css/taker.css">
+	</head>
+	<body>
+        <header>
+			<h1><img src="img/quill.png" alt="QuizMaker Logo Icon" />QuizTaker</h1>
+			<h2 id="quiz_title">
+				CSE 134B Quiz
+			</h2>
+			
+			<select id="display_group" title="Display Group">
+				<option>All Questions</option>
+				<option>Unanswered Questions</option>
+				<option>Bookmarked Questions</option>
+			</select>
+        </header>
+		
+		<aside>
+
+		  
+		<a href="#" class="tip hint"><img src="img/questionmark.png" height="13" width="13" alt="Help?">
+			<span>
+				- Green items are questions you've finished.
+				<br>- Blue items are incomplete.
+				<br>- Click up or down arrow to scroll.
+			</span>	
+		</a>
+		
+		  <menu id="qt">
+		  
+			<li class="qt_multipleChoice answered">
+			  <a href="#l1">Question 1</a>
+			  <span class="bookmark" title="Bookmark Question"></span>
+			  <span id="up" title="Previous Questions"></span>
+			</li>
+			<li class="qt_fillIn answered">
+			  <a href="#l2">Question 2</a>
+			  <span class="bookmark" title="Bookmark Question"></span>
+			</li>
+			<li class="qt_trueFalse">
+			  <a href="#l3">Question 3</a>
+			  <span class="bookmark" title="Bookmark Question"></span>
+			</li>
+			<li class="qt_shortAnswer">
+			  <a href="#l4">Question 4</a>
+			  <span class="bookmark" title="Bookmark Question"></span>
+			</li>
+			<li class="qt_fillIn">
+			  <a href="#l5">Question 5</a>
+			  <span class="bookmark marked" title="Bookmarked Question"></span>
+			  <span id="down" title="Next Questions"></span>
+			</li>
+		  </menu>
+			<h2 class="time_limit_heading blue_heading">Time Left</h2>
+			<p id="time_limit" class="blue_body">
+			00:30:00
+			</p>
+
+			<h2 class="time_limit_heading blue_heading">Answered</h2>
+			<p id="allocated_points" class="blue_body">
+			3/10
+			</p>
+		  <a class="blue_heading button">Submit &#x2713;</a>
+		  
+		</aside>
+		
+        <div id="container">
+        <!-- This area should remain at its position. -->
+
+        <!-- begin actual test questions -->
+        <div id="questions">
+			<span  id="l1" class="push">&nbsp;</span>
+            <div class="page">
+                <p id="q1"><a href="#" id="q1check" class="tip"><img src="img/greybookmark.png" height="13" width="13" alt="Bookmark?"><span>Bookmark this question? </span></a> 1. How many licks does it take to get to the center of a Tootsie Pop?</p>
+                <div class="mc"><input type="radio" name="q1a" value="1"> 1</div>
+                <div class="mc"><input type="radio" name="q1a" value="2"> 2</div>
+                <div class="mc selected"><input type="radio" name="q1a" value="3" checked> 3</div>
+                <div class="mc"><input type="radio" name="q1a" value="over 9000"> over 9000</div></div>
+			
+			<span id="l2" class="push">&nbsp;</span>
+	
+            <div class="page"><p id="q2"><a href="#" id="q2check" class="tip"><img src="img/greybookmark.png" height="13" width="13" alt="Bookmark?"><span>Bookmark this question?</span></a>
+                2. What is the answer to life, the universe, and everything?
+                <input type = "text" id="q2a" value="42" size="2" class="fillin"></p></div>
+
+			<span id="l3" class="push">&nbsp;</span>
+			
+            <div class="page"><p id="q3"><a href="#" id="q3check" class="tip"><img src="img/greybookmark.png" height="13" width="13" alt="Bookmark?"><span>Bookmark this question? </span></a>
+                3. This statement is false.</p>
+                <div class="mc"><input type="radio" name="q3a" value="true"> True</div>
+                <div class="mc"><input type="radio" name="q3a" value="false"> False</div></div>
+
+			<span id="l4" class="push">&nbsp;</span>
+            <div class="page"><p id="q4"><a href="#" id="q4check" class="tip"><img src="img/greybookmark.png" height="13" width="13" alt="Bookmark?"><span>Bookmark this question? </span></a>
+                4. Discuss the differences between a llama and a sloth. Also include reasons on why you're reading this.</p>
+                <textarea id="q4a" rows="13"></textarea></div>
+
+			<span id="l5" class="push">&nbsp;</span>
+            <div class="page"><p id="q5"><a href="#" id="q5check" class="tip"><img src="img/bookmark.png" height="10" width="10" alt="Bookmark?"><span>Bookmark this question? </span></a>
+                5. Mares eat oats, and does eat <input type = "text" id="q5a1" value="oats" size="2" class="fillin">, and little lambs eat ivy. A kid'll eat <input type = "text" id="q5a2" value="" size="2" class="fillin"> too if he could.</p></div>
+
+			<span id="l6" class="push">&nbsp;</span>
+            <div class="page"><p id="q6"><a href="#" id="q6check" class="tip"><img src="img/bookmark.png" height="10" width="10" alt="Bookmark?"><span>Bookmark this question? </span></a>
+                6. Hippopotomonstrosesquipedaliophobia is the phobia of <input type = "text" id="q6a" value="" size="30" class="fillin">.</p></div>
+
+			<span id="l7" class="push">&nbsp;</span>
+            <div class="page"><p id="q7"><a href="#" id="q7check" class="tip"><img src="img/greybookmark.png" height="13" width="13" alt="Bookmark?"><span>Bookmark this question? </span></a>
+                7. Compose a poem about your love of pizza and ice cream.</p>
+                <textarea id="q7a" rows="13"></textarea></div>
+
+			<span id="l8" class="push">&nbsp;</span>
+            <div class="page"><p id="q8"><a href="#" id="q8check" class="tip"><img src="img/greybookmark.png" height="13" width="13" alt="Bookmark?"><span>Bookmark this question? </span></a> 8. Select the answer(s) that is most likely to be correct.</p>
+                <div class="mc" style="background-color: #559CBE; color:white;"><input type="checkbox" id="q8a1" value="yes" checked> Yes</div>
+                <div class="mc"><input type="checkbox" id="q8a2" value="no"> No</div>
+                <div class="mc"><input type="checkbox" id="q8a3" value="no"> No</div>
+                <div class="mc" style="background-color: #559CBE; color:white;"><input type="checkbox" id="q8a4" value="maybe" checked> Yes</div></div>
+
+			<span id="l9" class="push">&nbsp;</span>
+            <div class="page"><p id="q9"><a href="#" id="q9check" class="tip"><img src="img/bookmark.png" height="10" width="10" alt="Bookmark?"><span>Bookmark this question?</span></a> 9. The cake is a lie.</p>
+                <div class="mc"><input type="radio" id="q9a1" value="true"> True</div>
+                <div class="mc"><input type="radio" id="q9a2" value="false"> False</div></div>
+
+			<span id="l10" class="push">&nbsp;</span>
+            <div  class="page"><p id="q10" style="text-align:justify"><a href="#" id="q10check" class="tip"><img src="img/greybookmark.png" height="13" width="13" alt="Bookmark?"><span>Bookmark this question?</span></a>
+                10. A rubberband with initial length L has one end tied to a wall. At t = 0, the other end is pulled away from the wall at speed V (assume that the rubber band stretches uniformly). At the same time, an ant located at the end not attached to the wall begins to crawl towards the wall, with speed u relative to the band. Why did the chicken cross the road, and how do I shot web? Show your work.</p>
+                <textarea id="q10a" rows="10"></textarea></div>
+
+        </div> <!-- for questions -->
+        </div> <!-- for container -->
+	</body>
+</html>

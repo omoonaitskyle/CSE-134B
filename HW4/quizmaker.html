@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+  <title>Quiz Maker</title>
+  
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/add.js"></script>
+  <script type="text/javascript" src="js/shortcut.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.js"></script>
+  <link rel="stylesheet" href="css/quizmakern.css" />
+  
+  <!--Sorting script-->
+  <script>
+  $(function() {
+    $( "#sortable1,.sorta" ).sortable({
+			connectWith:".csortable",
+      placeholder: "ui-state-highlight",
+			start: function(e,ui){
+			ui.placeholder.height(ui.item.height());
+			}
+    });
+    $( "#sortable" ).disableSelection();
+  });
+  </script>
+  
+</head>
+
+<body>
+<header>
+  <h1><img src="img/quill.png" alt="QuizMaker Logo Icon" />QuizMaker</h1>
+  <h2 id="quiz_title">Quiz Title<input id="quiz_title_input"class="faint" placeholder="click to edit"></input>
+  </h2>
+  <a href="quiztaker.html" id="preview">Preview Quiz</a>
+   <a href="help.html" id="help">Help</a>
+   <a id="create_new" onclick="createNewQuiz();">Create New<img id="arrow" src="img/right-arrow-icon.png" alt="" onclick="createNewQuiz();"></a>
+</header>
+
+<aside>
+  <menu id="qt">
+    <li id="qt_multipleChoice" onclick="addMultipleChoice();">
+      Multiple Choice
+      <span class="add_qt hover_fadein" title="Add new multiple choice question." ></span>
+    </li>
+    <li id="qt_trueFalse" onclick="addTrueFalse();">
+      True/False
+      <span class="add_qt hover_fadein" title="Add new true/false question."></span>
+    </li>
+    <li id="qt_fillIn" onclick="addFillIn();">
+      Fill-in
+      <span class="add_qt hover_fadein" title="Add new fill-in question."></span>
+    </li>
+    <li id="qt_shortAnswer" onclick="addShortAnswer();">
+      Short Answer
+      <span class="add_qt hover_fadein" title="Add new short answer question." ></span>
+    </li>
+		<li id="qt_section" onclick="addSection();recall();">
+			Add a Section
+			<span class="add_qt hover_fadein" title="Add new section."></span>
+		</li>
+  </menu>
+
+  <h2 class="time_limit_heading blue_heading">Time Limit</h2>
+  <p id="time_limit" class="blue_body">
+    <span id="hours" contenteditable="true">00</span>:<span id="minutes" contenteditable="true">00</span>:<span id="seconds" contenteditable="true">00</span>
+  </p>
+
+  <h2 class="time_limit_heading blue_heading">Allocated Points</h2>
+  <p id="allocated_points" class="blue_body">
+    <span id="total_point_value">0</span>
+  </p>
+  
+  <h2 class="time_limit_heading blue_heading">Saved Quizzes</h2>
+  <div id="saved_quizzes" class="blue_body">
+	<div class="saved_quiz_marker"></div>
+  </div>
+
+  <a href="#" class="blue_heading button" onclick="testJSON();">Update &#x2713;</a>
+</aside>
+
+<section id="qb_container">
+
+  <!--
+  Question Board - This is where the user will drag question types controls.
+  Once a question has been inserted in the Question Board, the user may edit
+  or reorder the questions.
+  -->
+  <ol class="qb csortable sorta"><input type="text" id="sortable1" class="section_text" placeholder="Section Title"></input><div class="endzoned"></div>
+  </ol>
+</section>
+
+</body>
+</html>

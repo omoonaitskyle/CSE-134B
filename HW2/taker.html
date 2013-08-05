@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Quiz Taker</title>
+  <link href="css/taker.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="font_calibri">
+  <div id="wrapper">
+    <!--===============================HEADER===============================-->
+    <header id="s_header" class="s_lvl_0">
+      <nav>      	
+      	<span class="right" style="font-weight: bold">QUIZ TAKER</span>
+        <ul>
+          <li><a href="http://classes.pint.com/cse134b/">Home</a></li>
+          <li><a href="http://classes.pint.com/cse134b/">About</a></li>
+          <li><a href="http://classes.pint.com/cse134b/">Contact</a></li>
+          <li style="border-right: none"><a href="../help.html">Help</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--================================BODY================================-->
+    <section id="s_body" class="s_lvl_0">
+
+    <div id="b_right" class="b_div">
+	    <fieldset>
+          <legend>Tuesday's Quiz</legend>
+
+		  <div class="details">
+			<span class="toplink">Name: <input type="text" placeholder="Insert name here">  PID: <input type="text" placeholder="Insert PID here">  </span>
+			Timer: 00:00:00
+			</div>
+		  
+        <!-- MULTIPLE CHOICE -->
+		    <div id="ea_mc" class="ea" draggable="false">
+			  <form id="eaqt_mc">
+        	<fieldset>
+            <legend class="ea_legend">MULTIPLE CHOICE</legend>
+
+				  <p class="question">1. Ei sale dolor eripuit mel. Nam ferri magna debet cu?</p>
+
+					<input type="radio" name="questionOne" value="optionOne"> Per ornatus interesset philosophia an. <br />
+
+					<input type="radio" name="questionOne" value="optionTwo"> Posse numquam gloriatur cu eum. <br />
+
+					<input type="radio" name="questionOne" value="optionThree"> Ei eam fugit molestiae. <br />			
+
+					<input type="radio" name="questionOne" value="optionFour"> Vel id zril persius delicatissimi. <br />
+			    </fieldset>
+			  </form>
+				</div>
+
+				<!-- FILL IN THE BLANK -->
+		    <div id="ea_fb" class="ea" draggable="false">
+			  <form id="eaqt_fb">
+			    <fieldset>
+				  <legend class="ea_legend">FILL IN THE BLANK</legend>
+					<p>
+						2. In sonet oratio pro, etiam 
+							<input type="text" size="25" class="fillIn">
+						perfecto sit te.
+					</p>
+			    </fieldset>
+			  </form>
+				</div>
+
+			<!-- TRUE OR FALSE -->
+			<div id="ea_tf" class="ea" draggable="false">
+			  <form>
+			    <fieldset>
+						<legend class="ea_legend">SHORT ANSWER</legend>
+
+						<p>3. Et corpora verterem mandamus vis, phaedrum ocurreret eu sit. Ad sea numquam commune. Sit in aeterno deseruisse adversarium, eirmod lucilius mei id, omnium nominavi mea id. Nisl deserunt recteque sed ea, magna ornatus inermis cum no, ei causae explicari eos. </p>
+						<textarea rows="8" cols="70"></textarea>
+				</fieldset>
+			  </form>
+			</div>
+
+			<div id="ea_la" class="ea" draggable="false">
+			  <form id="eaqt_la">
+			  	<fieldset>
+				  <legend class="ea_legend">TRUE OR FALSE</legend>
+
+					<!-- True/False -->
+				   	<p>4. Veri ludus similique at has?</p>
+						<input type="radio" name="trueFalseGroup" value="true"> True <br />
+						<input type="radio" name="trueFalseGroup" value="false"> False <br />
+			    </fieldset>
+			  </form>
+			</div>
+		    <div id="ea_sa" class="ea" draggable="true">
+			  <form id="eaqt_sa">
+			    <fieldset>
+				  <legend class="ea_legend">FILL IN AFTER</legend>
+   
+					<p>5. Donec sodales elit mi, vel pretium sem tristique ac? <input type="text" size="25" class="fillIn" /></p>
+				</fieldset>
+			  </form>
+			</div>
+
+			<!-- <div id="dragarea">
+			  DRAG NEW QUESTION TYPE HERE
+			</div> -->
+        </fieldset>
+	    <fieldset>
+          <legend>OPTIONS</legend>
+		  <form id="f_options">
+		    <div id="s_buttons">
+			  <input type="button" id="b_save" class="b" value="Save">
+			  <input type="button" id="b_submit" class="b" value="Submit">
+			</div>
+		  </form>
+        </fieldset>
+      </div>
+    </section>
+    <!--===============================FOOTER===============================-->
+    <section id="s_footer" class="s_lvl_0">
+	  <div id="f_left" class="hof_left">
+		<a href="http://www.example.edu" class="f_left_term">Terms</a>
+		<a href="http://www.example.edu" class="f_left_term" >Privacy & Security</a>
+	  </div>
+	  <div id="f_right" class="hof_right">
+		<a href="http://www.example.edu" class="f_left_term">UCSD 134B</a>
+		<a href="http://www.example.edu" class="f_left_term" >555.555.5555</a>
+	  </div>
+    </section>
+  </div>
+</body>
+</html>

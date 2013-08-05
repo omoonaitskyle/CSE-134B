@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Welcome to the POWerful Quiz Maker!</title>
+  </head>
+
+  <body>
+    <h1>Welcome to the POWerful Quiz Maker!</h1>
+    <input type="text" placeholder="Insert quiz title here"><br>
+    <textarea rows="4" cols="50" placeholder="Insert instructions here"></textarea>
+    
+    <fieldset>
+    <h2>1. True/False</h2>
+	<input type="text" name="HeaderTF1" size="40" placeholder="Insert section header here."><br>
+    <textarea rows="4" cols="50" placeholder="Insert question here"></textarea><br>
+    <p>Correct Answer: <br>
+      <input type="radio" name="TFAnswer1">True<br>
+      <input type="radio" name="TFAnswer1">False
+    </p>
+    <input type="button" value="Delete" id="delete1">
+    <input type="button" value="Add" id="add1">
+    </fieldset>
+    
+    <fieldset>
+    <h2>2. Multiple Choice</h2>
+	<input type="text" name="HeaderMC1" size="40" placeholder="Insert section header here.">
+	Number of Choices:
+		<select>
+				<option value="number3">3</option>
+				<option value="number4">4</option>
+				<option value="number5">5</option>
+				<option value="number6">6</option>
+		</select><br>
+    <textarea rows="4" cols="50" placeholder="Insert question here"></textarea><br>
+    <table style="border:none">
+      <tr>
+        <td> Choices: <br>
+          <input type="radio" name="MC1"><input type="text" placeholder="Answer 1" name="MultFill"><br>
+          <input type="radio" name="MC1"><input type="text" placeholder="Answer 2" name="MultFill"><br>
+          <input type="radio" name="MC1"><input type="text" placeholder="Answer 3" name="MultFill"><br>
+          <input type="radio" name="MC1"><input type="text" placeholder="Answer 4" name="MultFill"><br>
+          <input type="radio" name="MC1"><input type="text" placeholder="Answer 5" name="MultFill">
+        </td>
+        <td> Answer: <br>
+          <input type="checkbox" name="MCAnswer1" value="Answer #1">Answer 1<br>
+          <input type="checkbox" name="MCAnswer1" value="Answer #1">Answer 2<br>
+          <input type="checkbox" name="MCAnswer1" value="Answer #1">Answer 3<br>
+          <input type="checkbox" name="MCAnswer1" value="Answer #1">Answer 4<br>
+          <input type="checkbox" name="MCAnswer1" value="Answer #1">Answer 5
+        </td>
+      </tr>
+    </table>
+    <input type="button" value="Delete" id="delete2">
+    <input type="button" value="Add" id="add2">
+    </fieldset>
+    
+    <fieldset>
+    <h2>3. Fill in the Blank</h2>
+	<input type="text" name="HeaderFB1" size="40" placeholder="Insert section header here."><br>
+    <form>
+       <input type="text" name="FillAfter1" placeholder="Fill in blank">
+       ___________
+        <input type="text" name="FillAfter1" placeholder="Fill in blank">.
+    </form>
+    <p>Correct Answer: 
+      <input type="text" name="FillAnswer1" placeholder="Insert answer here.">
+    </p>
+    <input type="button" value="Delete" id="delete3">
+    <input type="button" value="Add" id="add3">
+    </fieldset>
+    
+    <fieldset>
+    <h2>4. Short Answer</h2>
+	<input type="text" name="HeaderSA1" size="40" placeholder="Insert section header here."><br>
+    <textarea rows="4" cols="50" placeholder="Insert question here."></textarea>
+    <p>Correct Answer: <br>
+      <textarea rows="4" cols="50" placeholder="Insert answer here."></textarea>
+    </p>
+    <input type="button" value="Delete" id="delete4">
+    <input type="button" value="Add" id="add4">
+    </fieldset>
+    
+    <fieldset>
+    <h2>Add new question</h2>
+    <select>
+      <option>What question type would you like?</option>
+      <option>----------------------------------</option>
+      <option>True/False</option>
+      <option>Multiple Choice</option>
+      <option>Fill in the Blank</option>
+      <option>Short Answer</option>
+    </select>
+    </fieldset>
+    <p>All done? Click submit to create your quiz!</p>
+	<form action="QuizPreview.html">
+      <input type="submit" value="Submit">
+    </form>
+    <hr>
+    <footer>
+      <p>&copy;2013 Team POW!</p>
+    </footer>
+  </body>
+
+</html>

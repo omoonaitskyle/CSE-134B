@@ -1,0 +1,301 @@
+/*
+ File: help css
+ Description: CSS file used for help.hmtl 
+
+*/
+
+@charset "UTF-8";
+
+* { margin:0; }
+
+body {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    padding: 0 0 20px 0;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+header {
+    height: 60px;
+    width: 100%;
+    background-color: #559CBE;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    color: white;
+    box-shadow: 0 4px 12px white;
+}
+
+header h1 {
+    margin: 0 0 0 5%;
+    padding: 10px 0 0 0;
+    position: relative;
+}
+
+header h1 img {
+    margin: 0 0 -8px -45px;
+    padding-right: 5px;
+}
+
+aside {
+    position: fixed;
+	width: 20%;
+	min-width: 200px;
+    left: 2%;
+    top: 80px;
+	bottom: 0;
+	overflow: auto;
+    overflow-x: hidden;
+}
+
+/*
+	Left side menu layout. 
+	Background: teal blue
+	Listed items have the border
+	Before: has icon
+	Hover: changes to green color
+*/
+menu {
+    list-style: none;
+	width: 86%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background-color: #559CBE;
+    color: white;
+}
+
+menu li {
+    padding: 10px 10px 10px 44px;
+    border-bottom: 1px solid #EFEFEF;
+    font-weight: lighter;
+    position: relative;
+}
+
+menu li:before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 8px;
+    top: 8px;
+    background-size: 20px 20px;
+}
+
+menu li:hover {
+	background-color:#54BF56; 
+}
+
+
+.blue_heading {
+    padding: 5px 5px 5px 10px;
+    color: white;
+    background-color: #579DBF;
+    margin-bottom: 0;
+    margin-top: 2em;
+	width: 80%;
+}
+
+.blue_body {
+    margin: 0;
+    padding: 5px 5px 5px 10px;
+    background-color: #DDEBF2;
+	width: 80%;
+}
+
+#container {
+    margin: 80px auto auto 21%;
+    padding: 0 5% 0;
+
+}
+
+#quiz_title {
+    position: absolute;
+    left: 28%;
+    top: 15px;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.push {
+	margin-top: -65px;    /* Size of fixed header */
+	padding-bottom: 65px; 
+	display: block; 
+}
+
+a { 
+	text-decoration: none; 
+	color:white; 
+	vertical-align:middle;
+}
+
+input, textarea {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+input {
+    text-align: center;
+}
+
+input.fillin { 
+	border: none; 
+	border-bottom: 1px solid black; 
+}
+
+input:focus, textarea:focus, input:hover, textarea:hover {
+    background-color:#DDEBF2;
+}
+
+a.tip span {
+    z-index: 100;
+    display: none;
+    padding: 5px 5px;
+    margin-top: 25px;
+    margin-left: 10px;
+    text-align:justify;
+}
+
+a.tip:hover span { 
+	display: inline;
+    position: absolute;
+    color: #FFF;
+    font-size: 12px;
+    background: #559CBE;
+}
+
+.hint {
+	padding: 5px;
+	position: relative;
+	top: -3px;
+	left: -5px;
+}
+
+a.hint:hover span{
+	width: 200px;
+    color: #000;
+	background: #DDEBF2;
+    border: 2px solid #777;
+}
+
+textarea {
+    padding: 10px 0 10px 10px;
+    margin: 10px 0 10px 35px;
+	width: 90%;
+}
+
+.mc {
+    color:#8A8A8A;
+    padding: 10px 0 10px 10px;
+    margin: 10px 20px 10px 35px;
+    background-color: #DDEBF2;
+    border: 3px solid #559CBE;
+    font-weight:bold;
+	width: 90%;
+}
+
+.selected {
+	color:white;
+	background-color:#559CBE;
+}
+
+.mc:hover {
+    color:white;
+    font-weight:bold;
+    background-color: #559CBE !important;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+
+
+.page { 
+	margin-bottom: 25px;
+}
+
+.button {
+    text-decoration: none;
+    font-size: 24px;
+    display: block;
+    width: 50%;
+    float: right;
+    text-align: center;
+    padding: 6px 1px 5px 8px;
+    opacity: .5;
+    position: relative;
+    margin-right: 15%;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+
+.button:hover {
+    opacity: 1;
+	cursor: pointer;
+}
+
+.qt_fillIn:before {
+    background-image: url('../img/sectioning_img.png');
+}
+
+/*
+	left side menu bar 
+*/
+
+#display_group {
+    position: absolute;
+    right: 0;
+    margin-right: 7%;
+    bottom: 14px;
+    font-size: 20px;
+	padding: 1px;
+    color: #337A9B;
+}
+
+
+/*
+	Preview: Used to return back to quizmaker page including positioning and icon
+*/
+#maker {
+    position: absolute;
+    right: 0;
+    margin-right: 3%;
+    top: 14px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+	padding: 10px 10px 10px 0;
+}
+
+#maker:hover {
+    opacity: 1;
+}
+
+#maker:after {
+    content: '';
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-image: url('../img/right-arrow-icon.png');
+    position: absolute;
+    right: -15px;
+    top: 12px;
+}
+
+/*
+	Layout for all the faq
+*/
+#faq li.layfaq {
+    padding: 10px 5% 40px 3%;
+    margin: 0 -5% 40px 0;
+    position: relative;
+    background-color: #FBFBFB;
+    border: 3px solid #559CBE;
+}

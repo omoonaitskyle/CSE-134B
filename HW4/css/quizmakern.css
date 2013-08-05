@@ -1,0 +1,626 @@
+@charset "UTF-8";
+
+aside {
+  position: fixed;
+  width: 20%;
+  left: 2%;
+  top: 100px;
+	bottom: 0;
+	overflow: auto;
+}
+
+aside ul {
+  padding-left: 1em;
+}
+
+#create_new{
+    position: absolute;
+    right: 300px;
+    margin-right: 3%;
+    top: 14px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+	padding: 10px 10px 10px 0;
+}
+
+#arrow{
+	margin-left: 5px;
+}
+
+#saved_quizzes{
+	height: 200px;
+}
+
+body {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 16px;
+  padding: 0 0 20px 0;
+  overflow-x: hidden;
+	margin: 0;
+	width: 100%;
+}
+
+.quiz_label{
+	font-size: 23px;
+}
+
+fieldset {
+    border: 1px solid #DDD;
+}
+
+legend {
+    opacity: 0.5;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+header {
+  height: 60px;
+  width: 100%;
+  background-color: #559CBE;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  color: white;
+  box-shadow: 0 4px 12px white;
+}
+
+header h1 {
+  margin: 0 0 0 5%;
+  padding: 12px 0 0 0;
+  position: relative;
+}
+
+header h1 img {
+  margin: 0 0 -8px -45px;
+  padding-right: 5px;
+}
+
+html {
+  padding: 0;
+	margin: 0;
+	width:100%;
+}
+
+html>body #sortable li {
+	line-height: 1.2em;
+}
+
+input[type="checkbox"] {
+  display:none;
+}
+
+input[type="checkbox"] + label {
+  display:inline-block;
+  margin-bottom: -3px;
+  width:19px;
+  height:19px;
+  background:url('../img/check_radio_sheet.png') left bottom no-repeat;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label {
+  background:url('../img/check_radio_sheet.png') -19px bottom no-repeat;
+  opacity: 1;
+}
+
+input[type="radio"] {
+  display:none;
+}
+
+input[type="radio"] + label {
+  display:inline-block;
+  margin-top: -8px;
+  width:19px;
+  height:17px;
+  background:url('../img/check_radio_sheet.png') -38px bottom no-repeat;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+  background:url('../img/check_radio_sheet.png') -57px bottom no-repeat;
+  opacity: 1;
+}
+
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #559CBE;
+  color: white;
+}
+
+menu li {
+  margin: 0;
+  padding: 10px 10px 10px 44px;
+  border-bottom: 1px solid #EFEFEF;
+  font-weight: lighter;
+  position: relative;
+}
+
+menu li:before{
+  content: '';
+  position: absolute;
+}
+
+menu li:before {
+  height: 20px;
+  width: 20px;
+  left: 8px;
+  top: 8px;
+  background-size: 20px 20px;
+}
+
+menu li:hover .add_qt {
+  opacity: 1;
+}
+
+menu li:last-child {
+  border-bottom: none;
+}
+
+textarea.q_prompt {
+    width: 100%;
+    height: 1.1em;
+}
+
+.blue_heading {
+    padding: 5px 5px 5px 10px;
+    color: white;
+    background-color: #579DBF;
+    margin-bottom: 0;
+    margin-top: 2em;
+}
+
+.blue_body {
+    margin: 0;
+    padding: 5px 5px 5px 10px;
+    background-color: #DDEBF2;
+}
+
+#fill_in_blank{
+	width:100%;
+	height:70px;
+}
+
+#time_limit, #allocated_points {
+    font-size: 36px;
+    font-weight: 100;
+    position: relative;
+}
+
+#time_limit:after, #goal_points:after {
+    content: '';
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-image: url('../img/edit-pencil-icon-black.png');
+    position: absolute;
+    left: 4.3em;
+    top: 18px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s;
+    -ms-transition: opacity 0.35s;
+    -moz-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+
+#time_limit:hover:after, #goal_points:hover:after {
+    opacity: 1;
+}
+
+
+
+#qt_multipleChoice:before {
+    background-image: url('../img/multiple-choice-icon.png');
+}
+
+#qt_trueFalse:before {
+    background-image: url('../img/true-false-icon.png');
+}
+
+#qt_fillIn:before {
+    background-image: url('../img/fill-in-icon.png');
+}
+
+#qt_shortAnswer:before {
+    background-image: url('../img/short-answer-icon.png');
+}
+
+#qt_section:before{
+	background-image: url('../img/sectioning_img.png')
+}
+
+#quiz_title {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    left: 26%;
+    top: 20px;
+    font-size: 26px;
+    font-weight: 100;
+}
+
+#quiz_title:after {
+    content: '';
+    position: absolute;
+    right: -27px;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+    background-image: url('../img/edit-pencil-icon.png');
+    opacity: 0.2;
+    -webkit-transition: opacity 0.35s;
+    -moz-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+
+#quiz_title:hover:after {
+    opacity: 1;
+}
+
+#preview {
+    position: absolute;
+    right: 0;
+    margin-right: 3%;
+    top: 14px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+	padding: 10px 10px 10px 0;
+}
+
+#preview:hover {
+    opacity: 1;
+}
+
+#preview:after {
+    content: '';
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-image: url('../img/right-arrow-icon.png');
+    position: absolute;
+    right: -15px;
+    top: 12px;
+}
+
+
+#help{
+    position: absolute;
+    right: 200px;
+    margin-right: 3%;
+    top: 14px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+	padding: 10px 10px 10px 0;
+}
+
+#help:hover {
+    opacity: 1;
+}
+
+#help:after {
+    content: '';
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-image: url('../img/right-arrow-icon.png');
+    position: absolute;
+    right: -15px;
+    top: 12px;
+}
+
+
+#help:hover {
+    opacity: 1;
+}
+
+#help:after {
+    content: '';
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-image: url('../img/right-arrow-icon.png');
+    position: absolute;
+    right: -15px;
+    top: 12px;
+}
+
+#qb_container {
+    margin: 100px auto auto 21%;
+    padding: 0 5% 0;
+}
+
+#sortable li {
+	font-size: 1.2em;
+}
+
+.add_qt {
+    height: 20px;
+    width: 20px;
+    background: url('../img/plus-icon.png') no-repeat 2px 2px;
+    background-size: 20px 20px;
+    right: 8px;
+    top: 8px;
+    padding: 2px;
+    cursor: pointer !important;
+    content: '';
+    position: absolute;
+}
+
+.button:hover {
+   opacity: 1;
+   cursor: pointer;
+}
+
+.dropZone {
+		display:none;
+}
+
+.qb {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.qb li.question {
+    padding: 10px 5% 40px 3%;
+    margin: 0 -5% 40px 0;
+    position: relative;
+    background-color: #FBFBFB;
+    border: 3px solid #559CBE;
+	height:100%;
+}
+
+.q_prompt {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    width: 60%;
+}
+
+.question *[contenteditable] {
+    cursor: text;
+}
+
+.question .points {
+    position: absolute;
+    right: 50px;
+    top: 13px;
+    font-weight: 100;
+}
+
+.delete_question,.move_question {
+    
+}
+
+.delete_question {
+	position: absolute;
+	display: block;
+	-webkit-transition: opacity 0.35s;
+	-ms-transition: opacity 0.35s;
+	-moz-transition: opacity 0.35s;
+	-o-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
+	background-image: url('../img/trash-icon.png');
+	height: 20px;
+	width: 20px;
+	opacity: 0.3;
+}
+
+.move_question {
+	position: absolute;
+	-webkit-transition: opacity 0.35s;
+	-ms-transition: opacity 0.35s;
+	-moz-transition: opacity 0.35s;
+	-o-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+	width: 25px;
+	height: 25px;
+	display: block;
+	left: 0;
+	top: 0;
+	background-image: url('../img/move-question-icon.png');
+	cursor: move;
+	opacity: 0.2;
+}
+
+.delete_question:hover,.move_question:hover{
+    opacity: 1;
+}
+
+.fill_in textarea.q_prompt {
+    width: auto;
+}
+
+.no_border {
+    border: none;
+}
+
+.plus_button {
+    display: inline;
+    background-color: #559CBE;
+    font-size: 16px;
+    padding: 3px 7px 3px 32px;
+    height: 24px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    opacity: 0.3;
+    font-weight: 300;
+    -webkit-transition: opacity 0.35s;
+    -ms-transition: opacity 0.35s;
+    -moz-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+
+.plus_button:hover {
+    opacity: 1;
+}
+
+.plus_button:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background-image: url('../img/plus-icon-blugbg.png');
+    left: 0;
+    top: 0;
+    border-right: 1px solid white;
+}
+
+.answers label, .answers input[type="text"] {
+    font-size: 0.85em;
+}
+
+.multiple_choice ul, .true_false ul {
+    list-style: none;
+    padding: 0;
+}
+
+.smaller {
+    font-size: 0.85em;
+}
+
+.true_false li span {
+    display: inline-block;
+    height: 22px;
+}
+
+.multiple_choice .choice[type="text"] {
+    width: 90%;
+}
+.guided{
+	margin-left:7px;
+}
+.multiple_choice .add_another_answer {
+    margin-top: 0.5em;
+}
+
+.short_answer textarea.answer {
+    width: 100%;
+    height: 70px;
+}
+
+.word_count { 
+	width: 40px;
+	text-align: center;
+}
+
+.fill_in p {
+    line-height: 2em;
+}
+
+.fill_in_area {
+    min-width: 200px;
+    border-bottom: 1px solid black;
+    display: inline-block;
+    line-height: 1em;
+}
+
+.hover_fadein {
+    -webkit-transition: opacity 0.35s;
+    -ms-transition: opacity 0.35s;
+    -moz-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+    opacity: 0;
+}
+
+.hover_fadein:hover {
+    opacity: 1;
+}
+
+.faint {
+    opacity: 0.3;
+}
+
+.invisible {
+    position: absolute;
+    left: -10000px;
+}
+
+.hidden_text {
+    color: transparent;
+    overflow: hidden;
+}
+
+.button {
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 6px 1px 5px 8px;
+    opacity: .5;
+    position: relative;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.point_value{
+	width: 40px;
+}
+.text_space{
+	width:60%;
+}
+
+.ui-state-highlight {
+	background-color:lightgray; height:150px; margin: 0 -5% 40px 0;
+}
+
+.section{
+	color:lightgreen;
+}
+
+.pts_text{
+	max-width: 40px;
+}
+
+.point_value{
+	width: 40px;
+}
+
+textarea{
+	resize: none;
+}	
+
+.question_type{
+	color: #559cbe;
+}
+
+.fill_in_blank{
+	width: 100%;
+	height: 70px;
+}
+
+.delete_answer_button{
+	height: 15px;
+	width: 15px;
+}
+
+.delete_answer_button:hover{
+	cursor: pointer;
+}
+
+.section_text{
+	border-style: none;
+	width:50%;
+	font-size: 30pt;
+}

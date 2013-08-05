@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Quiz Maker</title>
+  <link href="css/maker.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="font_calibri">
+  <div id="wrapper">
+    <!--===============================HEADER===============================-->
+    <!-- <section id="s_header" class="s_lvl_0">
+	  <div class="hof_left">
+	    QUIZ MAKER LEFT
+	  </div>
+	  <div class="hof_right">
+	    QUIZ MAKER RIGHT
+	  </div>
+    </section> -->
+    <header id="s_header" class="s_lvl_0">    	
+      <nav>
+      	<span class="right" style="font-weight: bold">QUIZ MAKER</span>
+        <ul>
+            <li><a href="http://classes.pint.com/cse134b/">Home</a></li>
+          <li><a href="http://classes.pint.com/cse134b/">About</a></li>
+          <li><a href="http://classes.pint.com/cse134b/">Contact</a></li>
+          <li style="border-right: none"><a href="../help.html">Help</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--================================BODY================================-->
+    <section id="s_body">
+	  <div id="b_left" class="b_div">
+	    <fieldset id="fs_question_type">
+		  <img src="images/up_arrow.png" alt="" width="90" height= "90" id="up_arrow" draggable="false"/>
+		  <div id ="qt-instr" class="qt s_lvl_1" draggable = "true">Instructions </div>
+		  <div id="qt_tf" class="qt s_lvl_2" draggable="true">True/False</div>
+		  <div id="qt_mc" class="qt s_lvl_1" draggable="true">Multiple Choice</div>
+		  <div id="qt_fb" class="qt s_lvl_2" draggable="true">Fill in the blank</div>
+		  <div id="qt_la" class="qt s_lvl_1" draggable="true">Short Answer</div>
+		  <img src="images/down_arrow.png" alt="" width="90" height="90" id="down_arrow" draggable="false"/>
+        </fieldset>
+	  <!-- <fieldset id="fs_saved_qizzes">
+          <legend>SAVED QUIZZES</legend>
+		  <div id="sq_tq" class="sq s_lvl_1" draggable="true">Tuesday's Quiz</div>
+		  <div id="sq_wq" class="sq s_lvl_1" draggable="true">Wednesday's Quiz</div>
+		  <div id="sq_mi" class="sq s_lvl_1" draggable="true">Midterm</div>
+		  <div id="sq_fi" class="sq s_lvl_1" draggable="true">Final</div>
+        </fieldset> -->
+      </div>
+      <div id="quiz_maker_body">
+		<div id="quiz_info" class="custom_box">
+			<p id="quiz_name" class="body_text">Quiz Name:
+				<input id="quiz_title_textbox" class="info_text_box" type="text" placeholder="Enter quiz title...">
+			</p>
+			<p id="course_label" class="body_text">Course:
+				<input type="text" id="course_tf" placeholder="Enter course name...">
+			</p> 
+			<p id="professor_name" class="body_text">Professor's Name:
+				<input id="professor_name_textfield" class="info_text_box" type="text" placeholder="Enter professor's name...">
+			</p>
+			<p id="date_label" class="body_text">Date:
+				<input id="date_textfield" class="info_text_box" type="text" placeholder="Enter date...">
+			</p>
+			<p id="time_label" class="body_text">Time: 
+				<input id="time_textfield" class="info_text_box" type="text" placeholder="Leave blank for untimed...">
+			</p>
+		</div>
+		<div id="instructions" class="instructions_box">
+			<p id="instruction_label" class="box_label">Instructions</p>
+			<img id="delete_instructions6" class="delete_button" alt="" src="images/delete_button.png">
+			<textarea id="instructions_textarea" placeholder="Enter instructions..."></textarea>
+		</div>
+		<div id="tf" class="tf_box">
+			<p id="tf_label" class="box_label">True or False</p>
+			<img id="delete_instructions2" class="delete_button" alt="" src="images/delete_button.png">
+			<input type="text" id="tf_textfield" placeholder="Enter question...">
+			<p id="tf_points_label">Points: <input type="text" class="tf_points" placeholder="Enter points..."></p>
+			<input type="radio" name="tf_radio" id="true_radio" class="radio_buttons"><span class="radio_text">True</span>
+			<input type="radio" name="tf_radio" id="false_radio" class="radio_buttons"><span class="radio_text">False</span>
+		</div>
+		<div id="short_answer" class="short_answer_box">
+			<p id="short_answer_label" class="box_label">Short Answer</p>
+			<img id="delete_instructions3" class="delete_button" alt="" src="images/delete_button.png">
+			<textarea id="short_answer_textarea" placeholder="Enter question..."></textarea>
+			<p id="sa_points_label">Points: <input type="text" class="tf_points" placeholder="Enter points..."></p>
+		</div>
+		<div id="multiple_choice" class="multiple_choice_box">
+			<p id="multiple_choice_label" class="box_label">Multiple Choice</p>
+			<img id="delete_instructions4" class="delete_button" alt= "" src="images/delete_button.png">
+			<input type="text" id="mc_textfield" placeholder="Enter a question...">
+			<input type="text" id="answer_1" class="answer_text" placeholder="Enter an answer...">
+			<input type="checkbox"><span class="radio_text">Correct Answer</span>
+			<br>
+			<input type="text" id="answer_2" class="answer_text" placeholder="Enter an answer...">
+
+			<input type="checkbox"><span class="radio_text">Correct Answer</span>
+			<br>
+			<input type="text" id="answer_3" class="answer_text" placeholder="Enter an answer...">
+
+			<input type="checkbox"><span class="radio_text">Correct Answer</span>
+			<br>
+			<input type="text" id="answer_4" class="answer_text" placeholder="Enter an answer...">
+			<input type="checkbox"><span class="radio_text">Correct Answer</span>
+			<p id="mc_points_label">Points: <input type="text" class="tf_points" placeholder="Enter points..."></p>
+			<br>
+			<input type="button" id="add_more_mc" value="Add Answer">
+		</div>
+		<div id="fill_in_blank" class="fill_in_blank_box">
+			<p id="fill_in_blank_label" class="box_label">Fill In The Blank</p>
+			<img id="delete_instructions5" class="delete_button" alt="" src="images/delete_button.png">
+			<textarea id="fill_in_blank_textarea" placeholder="Enclose answer in brackets[ ]"></textarea>
+			<p id="fitb_points_label">Points: <input type="text" class="tf_points" placeholder="Enter points..."></p>
+		</div>
+			<div id="dragarea">
+			  DRAG NEW QUESTION TYPE HERE
+			</div>
+		<fieldset class="options_bg">
+			<div class="options_bg">OPTIONS</div>
+			<form id="f_options">
+				<div id="s_buttons">
+				<label for="pg_dropdown" class="pagetext">Page </label> 
+				<select name="pg_dropdown" id="pg_dropdown" class="options_bg">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+				<input type="button" id="b_newpage" class="s_lvl_1 qt op_b" value="New Page">
+				<input type="button" id="b_preview" class="s_lvl_1 qt op_b" value="Preview">
+				<input type="button" id="b_save" class="s_lvl_1 qt op_b" value="Save">
+				<input type="button" id="b_publish" class="s_lvl_1 qt op_b" value="Publish">
+				</div>
+			</form>
+		</fieldset>
+      </div>
+	      </section>
+	  </div>
+
+    <!--===============================FOOTER===============================-->
+    <section id="s_footer" class="s_lvl_0">
+	  <div id="f_left" class="hof_left">
+		<a href="http://www.example.edu" class="f_left_term">Terms</a>
+		<a href="http://www.example.edu" class="f_left_term" >Privacy & Security</a>
+	  </div>
+	  <div id="f_right" class="hof_right">
+		<a href="http://www.example.edu" class="f_left_term">UCSD 134B</a>
+		<a href="http://www.example.edu" class="f_left_term" >555.555.5555</a>
+	  </div> 
+    </section>
+</body>
+</html>
